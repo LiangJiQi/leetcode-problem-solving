@@ -1,0 +1,21 @@
+/*
+ * @lc app=leetcode.cn id=1 lang=cpp
+ *
+ * [1] 两数之和
+ */
+
+// @lc code=start
+#include<vector>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int>result;
+        result.push_back(1);
+        result.push_back(4);
+        return result;
+    }
+};
+// @lc code=end
+

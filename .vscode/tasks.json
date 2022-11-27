@@ -1,0 +1,41 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "cmake",
+            "command": "cmake",
+            "args": [
+                ".."
+            ],
+            "group": {
+                "kind": "build"
+            },
+            "detail": "cmake任务。"
+        },
+        {
+            "label": "make",
+            "group": {
+                "kind": "build"
+            },
+            "command":"make",
+            "args": [
+            ]
+        },
+        {
+            "label": "Build-Leetcode",
+            "dependsOrder": "sequence",
+            "dependsOn":[
+                "cmake",
+                "make"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ],
+    "version": "2.0.0",
+    "options": {
+        "cwd": "${workspaceFolder}/build"
+    }
+}
