@@ -10,7 +10,8 @@
 //#include "141.环形链表.cpp"
 //#include "160.相交链表.cpp"
 //#include "206.反转链表.cpp"
-#include "283.移动零.cpp"
+//#include "283.移动零.cpp"
+#include "415.字符串相加.cpp"
 using namespace std;
 
 struct ListNode {
@@ -59,6 +60,9 @@ int main()
     //     q = q->next;
     //     q->next = nullptr;
     // }
+    string strInput1 = "127";//415.字符串相加
+    string strInput2 = "24";
+
 
     cout<<"begin test!\n"<<endl;
     Solution* solution = new Solution();
@@ -66,6 +70,7 @@ int main()
     int iResult = 0;
     bool bResult = false;
     ListNode *pResult = nullptr;
+    string strResult = "";
     //result = solution->twoSum(input1, input2[0]);//1.两数之和
     //iResult = solution->removeDuplicates(input1);//26.删除有序数组中的重复项
     //iResult = solution->mySqrt(17);//69.x-的平方根
@@ -74,8 +79,10 @@ int main()
     //bResult = solution->hasCycle(headA);//141.环形链表
     //pResult = solution->getIntersectionNode(headA, headB);//160.相交链表
     //pResult = solution->reverseList(headA);//206.反转链表
-    solution->moveZeroes(input1);//283.移动零
+    //solution->moveZeroes(input1);//283.移动零
+    strResult = solution->addStrings(strInput1, strInput2);//415.字符串相加
     //cout<<iResult<<endl;
+    cout<<strResult<<endl;
     while (pResult != nullptr)
     {
         cout<<pResult->val<<" ";
