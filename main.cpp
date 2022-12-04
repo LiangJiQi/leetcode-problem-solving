@@ -11,7 +11,8 @@
 //#include "160.相交链表.cpp"
 //#include "206.反转链表.cpp"
 //#include "283.移动零.cpp"
-#include "415.字符串相加.cpp"
+//#include "415.字符串相加.cpp"
+#include "746.使用最小花费爬楼梯.cpp"
 using namespace std;
 
 struct ListNode {
@@ -30,7 +31,8 @@ int main()
     //int arr1[] = {4,1,8,4,5};//160.相交链表
     //int arr2[] = {5,6,1,8,4,5};//160.相交链表
     //int arr1[] = {1,2,3,4,5};//206.反转链表
-    int arr1[] = {0,1,0,3,12};
+    //int arr1[] = {0,1,0,3,12};//283.移动零
+    int arr1[] = {1,100,1,1,1,100,1,1,100,1};//746.使用最小花费爬楼梯
     int arr2[] = {0};
     vector<int>input1(begin(arr1),end(arr1));
     vector<int>input2(begin(arr2),end(arr2));
@@ -80,9 +82,10 @@ int main()
     //pResult = solution->getIntersectionNode(headA, headB);//160.相交链表
     //pResult = solution->reverseList(headA);//206.反转链表
     //solution->moveZeroes(input1);//283.移动零
-    strResult = solution->addStrings(strInput1, strInput2);//415.字符串相加
-    //cout<<iResult<<endl;
-    cout<<strResult<<endl;
+    //strResult = solution->addStrings(strInput1, strInput2);//415.字符串相加
+    iResult = solution->minCostClimbingStairs(input1);//746.使用最小花费爬楼梯
+    cout<<iResult<<endl;
+    //cout<<strResult<<endl;
     while (pResult != nullptr)
     {
         cout<<pResult->val<<" ";
