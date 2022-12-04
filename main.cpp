@@ -9,8 +9,17 @@
 //#include "121.买卖股票的最佳时机.cpp"
 //#include "141.环形链表.cpp"
 //#include "160.相交链表.cpp"
-#include "206.反转链表.cpp"
+//#include "206.反转链表.cpp"
+#include "283.移动零.cpp"
 using namespace std;
+
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
 
 int main()
 {
@@ -19,7 +28,8 @@ int main()
     //int arr1[] = {7,1,5,3,6,4};//121.买卖股票的最佳时机
     //int arr1[] = {4,1,8,4,5};//160.相交链表
     //int arr2[] = {5,6,1,8,4,5};//160.相交链表
-    int arr1[] = {1,2,3,4,5};
+    //int arr1[] = {1,2,3,4,5};//206.反转链表
+    int arr1[] = {0,1,0,3,12};
     int arr2[] = {0};
     vector<int>input1(begin(arr1),end(arr1));
     vector<int>input2(begin(arr2),end(arr2));
@@ -63,7 +73,8 @@ int main()
     //iResult = solution->maxProfit(input1);//121.买卖股票的最佳时机
     //bResult = solution->hasCycle(headA);//141.环形链表
     //pResult = solution->getIntersectionNode(headA, headB);//160.相交链表
-    pResult = solution->reverseList(headA);//206.反转链表
+    //pResult = solution->reverseList(headA);//206.反转链表
+    solution->moveZeroes(input1);//283.移动零
     //cout<<iResult<<endl;
     while (pResult != nullptr)
     {
