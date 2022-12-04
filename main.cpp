@@ -8,7 +8,8 @@
 //#include "70.爬楼梯.cpp"
 //#include "121.买卖股票的最佳时机.cpp"
 //#include "141.环形链表.cpp"
-#include "160.相交链表.cpp"
+//#include "160.相交链表.cpp"
+#include "206.反转链表.cpp"
 using namespace std;
 
 int main()
@@ -16,36 +17,38 @@ int main()
     //int arr1[] = {2,7,11,15};//1.两数之和
     //int arr1[] = {1,1,2};//26.删除有序数组中的重复项
     //int arr1[] = {7,1,5,3,6,4};//121.买卖股票的最佳时机
-    int arr1[] = {4,1,8,4,5};
-    int arr2[] = {5,6,1,8,4,5};
+    //int arr1[] = {4,1,8,4,5};//160.相交链表
+    //int arr2[] = {5,6,1,8,4,5};//160.相交链表
+    int arr1[] = {1,2,3,4,5};
+    int arr2[] = {0};
     vector<int>input1(begin(arr1),end(arr1));
     vector<int>input2(begin(arr2),end(arr2));
-    ListNode *headA = new ListNode(4);
+    ListNode *headA = new ListNode(1);
     ListNode *headB = new ListNode(5);
     ListNode *p = headA;
     ListNode *q = headB;
-    // for(int iCount = 0; iCount < 4;iCount++)
-    // {
-    //     p->next = new ListNode(1);
-    //     p = p->next;
-    //     p->next = nullptr;
-    // }
-    //160.相交链表
-    p->next = new ListNode(input1[1]);
-    p->next->next = nullptr;
-    p = p->next;
-    for(int i = 1; i < input2.size();i++)
+    for(int iCount = 1; iCount < input1.size();iCount++)
     {
-        q->next = new ListNode(input2[i]);
-        if(i > 2)
-        {
-            p->next = q->next;
-            p = p->next;
-            p->next = nullptr;
-        }
-        q = q->next;
-        q->next = nullptr;
+        p->next = new ListNode(input1[iCount]);
+        p = p->next;
+        p->next = nullptr;
     }
+    //160.相交链表
+    // p->next = new ListNode(input1[1]);
+    // p->next->next = nullptr;
+    // p = p->next;
+    // for(int i = 1; i < input2.size();i++)
+    // {
+    //     q->next = new ListNode(input2[i]);
+    //     if(i > 2)
+    //     {
+    //         p->next = q->next;
+    //         p = p->next;
+    //         p->next = nullptr;
+    //     }
+    //     q = q->next;
+    //     q->next = nullptr;
+    // }
 
     cout<<"begin test!\n"<<endl;
     Solution* solution = new Solution();
@@ -59,12 +62,15 @@ int main()
     //iResult = solution->climbStairs(44);//70.爬楼梯
     //iResult = solution->maxProfit(input1);//121.买卖股票的最佳时机
     //bResult = solution->hasCycle(headA);//141.环形链表
-    pResult = solution->getIntersectionNode(headA, headB);//160.相交链表
+    //pResult = solution->getIntersectionNode(headA, headB);//160.相交链表
+    pResult = solution->reverseList(headA);//206.反转链表
     //cout<<iResult<<endl;
-    if(pResult)
+    while (pResult != nullptr)
     {
-        cout<<pResult->val<<endl;
+        cout<<pResult->val<<" ";
+        pResult = pResult->next;
     }
+    
     for(auto r : result)
     {
         //cout<<r<<" ";
