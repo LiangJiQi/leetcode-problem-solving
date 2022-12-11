@@ -34,7 +34,7 @@ int main()
     //int arr1[] = {1,2,3,4,5};//206.反转链表
     //int arr1[] = {0,1,0,3,12};//283.移动零
     //int arr1[] = {1,100,1,1,1,100,1,1,100,1};//746.使用最小花费爬楼梯
-    int arr1[] = {9,4,1,7};
+    int arr1[] = {9,4,1,1,8,6,5,3,7,7};
     int arr2[] = {0};
     vector<int>input1(begin(arr1),end(arr1));
     vector<int>input2(begin(arr2),end(arr2));
