@@ -35,7 +35,7 @@ public:
         int iHightCopy = iHight;
         
 
-        // //版本一
+        // //版本一，假想哨兵位被挖空了，可以向空位填充覆盖
         // while (iLow < iHight)
         // {
         //     while (nums[iHight] >= iPivot && iLow < iHight)
@@ -51,8 +51,23 @@ public:
         // }
         // nums[iLow] = iPivot;
 
-        //版本二
-        
+        //版本二,哨兵位不空，先找更小和更大的然后交换
+        while (iLow < iHight)
+        {
+            while (nums[iHight] >= iPivot && iLow < iHight)
+            {
+                iHight--;
+            }
+            while (nums[iLow] <= iPivot && iLow < iHight)
+            {
+                iLow++;
+            }
+            swap(nums[iLow],nums[iHight]);
+        }
+        swap(nums[iLow],nums[iLowCopy]);
+
+        QuickSort(nums,iLowCopy,iLow-1);
+        QuickSort(nums,iHight+1,iHightCopy);
         return;
     }
 
@@ -67,9 +82,10 @@ public:
         //BubbleSort(nums);
         
         //快速排序，快排，二分排序
-        QuickSort(nums,0,nums.size() - 1);
+        //QuickSort(nums,0,nums.size() - 1);
 
         //堆排序
+        
         
         //https://zhuanlan.zhihu.com/p/42586566
         //选择排序
