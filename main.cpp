@@ -13,7 +13,8 @@
 //#include "283.移动零.cpp"
 //#include "415.字符串相加.cpp"
 //#include "746.使用最小花费爬楼梯.cpp"
-#include "1984.学生分数的最小差值.cpp"
+//#include "1984.学生分数的最小差值.cpp"
+#include "3.无重复字符的最长子串.cpp"
 using namespace std;
 
 struct ListNode {
@@ -64,7 +65,8 @@ int main()
     //     q = q->next;
     //     q->next = nullptr;
     // }
-    string strInput1 = "127";//415.字符串相加
+    //string strInput1 = "154";//415.字符串相加
+    string strInput1 = "abcabcbb";
     string strInput2 = "24";
 
 
@@ -86,7 +88,8 @@ int main()
     //solution->moveZeroes(input1);//283.移动零
     //strResult = solution->addStrings(strInput1, strInput2);//415.字符串相加
     //iResult = solution->minCostClimbingStairs(input1);//746.使用最小花费爬楼梯
-    iResult = solution->minimumDifference(input1, 2);
+    //iResult = solution->minimumDifference(input1, 2);//1984.学生分数的最小差值
+    iResult = solution->lengthOfLongestSubstring(strInput1);
     cout<<iResult<<endl;
     //cout<<strResult<<endl;
     while (pResult != nullptr)
