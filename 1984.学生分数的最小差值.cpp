@@ -77,10 +77,14 @@ public:
         int iLeftChildIndex = iBeginaIndex * 2 + 1;//开始节点的左孩子节点下标
         int iRightChildIndex = iLeftChildIndex + 1;//开始节点的右孩子节点下标
         int iMaxChildIndex = 0;//左右孩子中哪个值更大的孩子节点下标
-        while(iBeginaIndex <= iEndIndex && iRightChildIndex <= iEndIndex)
+        while(iLeftChildIndex <= iEndIndex)
         {
             //取左右孩子中最大的值的下标
-            iMaxChildIndex = nums[iLeftChildIndex] > nums[iRightChildIndex] ? iLeftChildIndex : iRightChildIndex;
+            iMaxChildIndex = iLeftChildIndex;
+            if(iRightChildIndex <= iEndIndex)
+            {
+                iMaxChildIndex = nums[iLeftChildIndex] > nums[iRightChildIndex] ? iLeftChildIndex : iRightChildIndex;
+            }
             if(nums[iMaxChildIndex] > nums[iBeginaIndex])//如果有其中一个孩子的值比父节点的值更大
             {
                 swap(nums[iMaxChildIndex], nums[iBeginaIndex]);//交换他们
