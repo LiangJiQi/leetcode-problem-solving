@@ -15,7 +15,8 @@
 //#include "746.使用最小花费爬楼梯.cpp"
 //#include "1984.学生分数的最小差值.cpp"
 //#include "3.无重复字符的最长子串.cpp"
-#include "15.三数之和.cpp"
+//#include "15.三数之和.cpp"
+#include "33.搜索旋转排序数组.cpp"
 using namespace std;
 
 struct ListNode {
@@ -37,7 +38,8 @@ int main()
     //int arr1[] = {0,1,0,3,12};//283.移动零
     //int arr1[] = {1,100,1,1,1,100,1,1,100,1};//746.使用最小花费爬楼梯
     //int arr1[] = {9,4,1,7};//1984.学生分数的最小差值
-    int arr1[] = {-1,0,1,2,-1,-4,-2,-3,3,0,4};
+    //int arr1[] = {-1,0,1,2,-1,-4,-2,-3,3,0,4};//15.三数之和
+    int arr1[] = {3,5,1};//{4,5,6,7,8,1,2,3};//33.搜索旋转排序数组
     int arr2[] = {0};
     vector<int>input1(begin(arr1),end(arr1));
     vector<int>input2(begin(arr2),end(arr2));
@@ -93,8 +95,9 @@ int main()
     //iResult = solution->minCostClimbingStairs(input1);//746.使用最小花费爬楼梯
     //iResult = solution->minimumDifference(input1, 2);//1984.学生分数的最小差值
     //iResult = solution->lengthOfLongestSubstring(strInput1);
-    resultVec2 = solution->threeSum(input1);
-    //cout<<iResult<<endl;
+    //resultVec2 = solution->threeSum(input1);//15.三数之和
+    iResult = solution->search(input1,3);
+    cout<<iResult<<endl;
     //cout<<strResult<<endl;
     while (pResult != nullptr)
     {
