@@ -14,7 +14,8 @@
 //#include "415.字符串相加.cpp"
 //#include "746.使用最小花费爬楼梯.cpp"
 //#include "1984.学生分数的最小差值.cpp"
-#include "3.无重复字符的最长子串.cpp"
+//#include "3.无重复字符的最长子串.cpp"
+#include "15.三数之和.cpp"
 using namespace std;
 
 struct ListNode {
@@ -35,7 +36,8 @@ int main()
     //int arr1[] = {1,2,3,4,5};//206.反转链表
     //int arr1[] = {0,1,0,3,12};//283.移动零
     //int arr1[] = {1,100,1,1,1,100,1,1,100,1};//746.使用最小花费爬楼梯
-    int arr1[] = {9,4,1,7};
+    //int arr1[] = {9,4,1,7};//1984.学生分数的最小差值
+    int arr1[] = {-1,0,1,2,-1,-4,-2,-3,3,0,4};
     int arr2[] = {0};
     vector<int>input1(begin(arr1),end(arr1));
     vector<int>input2(begin(arr2),end(arr2));
@@ -72,7 +74,8 @@ int main()
 
     cout<<"begin test!\n"<<endl;
     Solution* solution = new Solution();
-    vector<int> result(1);
+    vector<int> resultVec(1);
+    vector<vector<int>> resultVec2;
     int iResult = 0;
     bool bResult = false;
     ListNode *pResult = nullptr;
@@ -89,8 +92,9 @@ int main()
     //strResult = solution->addStrings(strInput1, strInput2);//415.字符串相加
     //iResult = solution->minCostClimbingStairs(input1);//746.使用最小花费爬楼梯
     //iResult = solution->minimumDifference(input1, 2);//1984.学生分数的最小差值
-    iResult = solution->lengthOfLongestSubstring(strInput1);
-    cout<<iResult<<endl;
+    //iResult = solution->lengthOfLongestSubstring(strInput1);
+    resultVec2 = solution->threeSum(input1);
+    //cout<<iResult<<endl;
     //cout<<strResult<<endl;
     while (pResult != nullptr)
     {
@@ -98,9 +102,17 @@ int main()
         pResult = pResult->next;
     }
     
-    for(auto r : result)
+    for(auto r : resultVec)
     {
         //cout<<r<<" ";
+    }
+    for(auto v : resultVec2)
+    {
+        for(auto i : v)
+        {
+            cout<<i<<" ";
+        }
+        cout<<endl;
     }
     for(auto i : input1)
     {
