@@ -1,5 +1,6 @@
 {
     "tasks": [
+        //make & cmake
         {
             "type": "shell",
             "label": "cmake",
@@ -17,20 +18,49 @@
             "group": {
                 "kind": "build"
             },
-            "command":"make",
-            "args": [
-            ]
+            "command": "make",
+            "args": []
         },
         {
-            "label": "Build-Leetcode",
+            "label": "cmake_build",
             "dependsOrder": "sequence",
-            "dependsOn":[
+            "dependsOn": [
                 "cmake",
                 "make"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        //windows下g++编译
+        {
+            "type": "shell",
+            "label": "win_g++",
+            "command":"C:/MinGW/bin/g++.exe",
+            "args": [
+                "-g","${workspaceFolder}\\*.cpp",
+                "-o","build\\${workspaceFolder}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher":["$gcc"],
+            "group": {
+                "kind": "build"
+            },
+            "detail": "win_g++"
+        },
+        {
+            "label": "win_gcc_build",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "win_g++"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
             }
         }
     ],

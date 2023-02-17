@@ -17,7 +17,7 @@
 //#include "3.无重复字符的最长子串.cpp"
 //#include "15.三数之和.cpp"
 //#include "33.搜索旋转排序数组.cpp"
-#include "46.全排列.cpp"
+//#include "46.全排列.cpp"
 using namespace std;
 
 struct ListNode {

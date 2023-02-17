@@ -4,7 +4,7 @@
  * [69] x 的平方根 
  */
 #include<cmath>
-
+using namespace std;
 // @lc code=start
 class Solution {
 public:
