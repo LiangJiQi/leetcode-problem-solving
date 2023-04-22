@@ -27,7 +27,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "Build-Leetcode"
+            "preLaunchTask": "cmake_build"
         }
 
     ]

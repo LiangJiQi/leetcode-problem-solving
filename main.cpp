@@ -18,6 +18,7 @@
 //#include "15.三数之和.cpp"
 //#include "33.搜索旋转排序数组.cpp"
 //#include "46.全排列.cpp"
+#include "213.打家劫舍-ii.cpp"
 using namespace std;
 
 struct ListNode {
@@ -41,7 +42,8 @@ int main()
     //int arr1[] = {9,4,1,7};//1984.学生分数的最小差值
     //int arr1[] = {-1,0,1,2,-1,-4,-2,-3,3,0,4};//15.三数之和
     //int arr1[] = {3,5,1};//{4,5,6,7,8,1,2,3};//33.搜索旋转排序数组
-    int arr1[] = {1,2,3};//46.全排列
+    //int arr1[] = {1,2,3};//46.全排列
+    int arr1[] = {2,3,2};//213.打家劫舍-ii
     int arr2[] = {0};
     vector<int>input1(begin(arr1),end(arr1));
     vector<int>input2(begin(arr2),end(arr2));
@@ -77,7 +79,8 @@ int main()
 
 
     cout<<"begin test!\n"<<endl;
-    Solution* solution = new Solution();
+    //Solution* solution = new Solution();
+    Solution* solution = nullptr;
     vector<int> resultVec(1);
     vector<vector<int>> resultVec2;
     int iResult = 0;
@@ -99,7 +102,7 @@ int main()
     //iResult = solution->lengthOfLongestSubstring(strInput1);
     //resultVec2 = solution->threeSum(input1);//15.三数之和
     //iResult = solution->search(input1,3);//33.搜索旋转排序数组
-    resultVec2 = solution->permute(input1);
+    iResult = solution->rob(input1);
     //cout<<iResult<<endl;
     //cout<<strResult<<endl;
     while (pResult != nullptr)
