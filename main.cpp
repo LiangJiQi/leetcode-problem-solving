@@ -20,7 +20,8 @@
 //#include "46.全排列.cpp"
 //#include "213.打家劫舍-ii.cpp"
 //#include "54.螺旋矩阵.cpp"
-#include "56.合并区间.cpp"
+//#include "56.合并区间.cpp"
+#include "74.搜索二维矩阵.cpp"
 using namespace std;
 
 struct ListNode {
@@ -54,8 +55,10 @@ int main()
     vector<int>input2(begin(arr2),end(arr2));
     vector<int>input3(begin(arr3),end(arr3));
     //vector<vector<int>> input4 = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};//54.螺旋矩阵
-    vector<vector<int>> input4 = {{1, 3}, {2, 6}, {8, 10},{15, 18}};//56.合并区间
+    //vector<vector<int>> input4 = {{1, 3}, {2, 6}, {8, 10},{15, 18}};//56.合并区间
     //vector<vector<int>> input4 = {{1, 3}, {3, 18}};//56.合并区间
+    vector<vector<int>> input4 = {{1,3,5,7}, {10,11,16,20}, {23,30,34,60}};//74.搜索二维矩阵
+    //vector<vector<int>> input4 = {{1}};//74.搜索二维矩阵
     ListNode *headA = new ListNode(1);
     ListNode *headB = new ListNode(5);
     ListNode *p = headA;
@@ -113,7 +116,8 @@ int main()
     //iResult = solution->search(input1,3);//33.搜索旋转排序数组
     //iResult = solution->rob(input1);//213.打家劫舍-ii
     //resultVec = solution->spiralOrder(input4);//54.螺旋矩阵
-    resultVec2 = solution->merge(input4);//56.合并区间
+    //resultVec2 = solution->merge(input4);//56.合并区间
+    bResult = solution->searchMatrix(input4, 13);
     //cout<<iResult<<endl;
     //cout<<strResult<<endl;
     while (pResult != nullptr)

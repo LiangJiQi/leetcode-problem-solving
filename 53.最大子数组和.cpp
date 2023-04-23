@@ -2,6 +2,7 @@
  * @lc app=leetcode.cn id=53 lang=cpp
  *
  * [53] 最大子数组和
+ * 动态规划法求解，当前数大于从头到当前之间的累积和时放弃以往的累积和，从新开始算累积和
  */
 #include<vector>
 using namespace std;
@@ -10,34 +11,20 @@ class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
         int iNumSize = nums.size();
-        int iMaxSum = 0;
-        int iSubSum = iNumSize ? nums[0] : 0;
-        for(int i = 0, j = 0;i < iNumSize && j <= i;)
+        int iSubSum = 0;
+        int iMaxSum = iNumSize ? nums[0] : 0;//初始化为第一个数
+        for(int i = 0;i < iNumSize ; i++)
         {
-            if(i == j)
+            if(nums[i] > iSubSum + nums[i])//当前数大于从头到当前之间的累积和时放弃以往的累积和
             {
-                iSubSum += (++i < iNumSize) ? nums[i] : 0;
-                iMaxSum = iSubSum > iMaxSum ? iSubSum : iMaxSum;
-                continue;
-            }
-            int iLeft = iSubSum - ((j+i)<iNumSize ? nums[j] : 0);
-            int iRight = iSubSum + ((i+i)<iNumSize ? nums[i] : 0); 
-            if (iLeft > iRight)
-            {
-                j++;
-                iSubSum = iLeft;
-            }
-            else if(iLeft < iRight)
-            {
-                i++;
-                iSubSum = iRight;
+                iSubSum = nums[i];
             }
             else
             {
-                
+                iSubSum += nums[i];//从新开始算累积和
             }
+            iMaxSum = max(iMaxSum, iSubSum);//每次累积和都相互比较，取最大数作结果
         }
-
         return iMaxSum;
     }
 };
