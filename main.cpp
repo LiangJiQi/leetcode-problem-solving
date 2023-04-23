@@ -21,7 +21,8 @@
 //#include "213.打家劫舍-ii.cpp"
 //#include "54.螺旋矩阵.cpp"
 //#include "56.合并区间.cpp"
-#include "74.搜索二维矩阵.cpp"
+//#include "74.搜索二维矩阵.cpp"
+#include "200.岛屿数量.cpp"
 using namespace std;
 
 struct ListNode {
@@ -59,6 +60,7 @@ int main()
     //vector<vector<int>> input4 = {{1, 3}, {3, 18}};//56.合并区间
     vector<vector<int>> input4 = {{1,3,5,7}, {10,11,16,20}, {23,30,34,60}};//74.搜索二维矩阵
     //vector<vector<int>> input4 = {{1}};//74.搜索二维矩阵
+    vector<vector<char>> input5 = {{'1','1','1'}, {'0','1','0'}, {'1','1','1'}};//200.岛屿数量
     ListNode *headA = new ListNode(1);
     ListNode *headB = new ListNode(5);
     ListNode *p = headA;
@@ -117,7 +119,8 @@ int main()
     //iResult = solution->rob(input1);//213.打家劫舍-ii
     //resultVec = solution->spiralOrder(input4);//54.螺旋矩阵
     //resultVec2 = solution->merge(input4);//56.合并区间
-    bResult = solution->searchMatrix(input4, 13);
+    //bResult = solution->searchMatrix(input4, 13);//74.搜索二维矩阵
+    iResult = solution->numIslands(input5);//200.岛屿数量
     //cout<<iResult<<endl;
     //cout<<strResult<<endl;
     while (pResult != nullptr)
