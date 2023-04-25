@@ -23,7 +23,8 @@
 //#include "56.合并区间.cpp"
 //#include "74.搜索二维矩阵.cpp"
 //#include "200.岛屿数量.cpp"
-#include "236.二叉树的最近公共祖先.cpp"
+//#include "236.二叉树的最近公共祖先.cpp"
+#include "347.前-k-个高频元素.cpp"
 using namespace std;
 
 struct ListNode {
@@ -57,7 +58,8 @@ int main()
     //int arr1[] = {1,2,3};//46.全排列
     //int arr1[] = {2,3,2};//213.打家劫舍-ii
     //int arr1[] = {1, 2, 3, 4};//54.螺旋矩阵
-    int arr1[] = {1, 2, 3, 4};//56.合并区间
+    //int arr1[] = {1, 2, 3, 4};//56.合并区间
+    int arr1[] = {1, 1, 1, 2, 2, 3};
     int arr2[] = {5, 6, 7, 8};
     int arr3[] = {9, 10, 11, 12};
     vector<int>input1(begin(arr1),end(arr1));
@@ -81,11 +83,11 @@ int main()
     }
 
     //236.二叉树的最近公共祖先
-    TreeNode *p1 = new TreeNode(3);
-    TreeNode *p2 = new TreeNode(5);
-    TreeNode *p3 = new TreeNode(1);
-    p1->left = p2;
-    p1->right = p3;
+    // TreeNode *p1 = new TreeNode(3);
+    // TreeNode *p2 = new TreeNode(5);
+    // TreeNode *p3 = new TreeNode(1);
+    // p1->left = p2;
+    // p1->right = p3;
     //160.相交链表
     // p->next = new ListNode(input1[1]);
     // p->next->next = nullptr;
@@ -115,7 +117,7 @@ int main()
     int iResult = 0;
     bool bResult = false;
     ListNode *pResult = nullptr;
-    TreeNode *pResultRoot = nullptr;
+    //TreeNode *pResultRoot = nullptr;
     string strResult = "";
     //result = solution->twoSum(input1, input2[0]);//1.两数之和
     //iResult = solution->removeDuplicates(input1);//26.删除有序数组中的重复项
@@ -138,7 +140,7 @@ int main()
     //bResult = solution->searchMatrix(input4, 13);//74.搜索二维矩阵
     //iResult = solution->numIslands(input5);//200.岛屿数量
     //pResultRoot = solution->lowestCommonAncestor(p1, p2, p3);//236.二叉树的最近公共祖先
-
+    resultVec = solution->topKFrequent(input1, 2);
     //cout<<iResult<<endl;
     //cout<<strResult<<endl;
     while (pResult != nullptr)
