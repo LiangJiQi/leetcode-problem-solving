@@ -26,7 +26,8 @@
 //#include "236.二叉树的最近公共祖先.cpp"
 //#include "347.前-k-个高频元素.cpp"
 //#include "875.爱吃香蕉的珂珂.cpp"
-#include "1905.统计子岛屿.cpp"
+//#include "1905.统计子岛屿.cpp"
+#include "23.合并-k-个升序链表.cpp"
 using namespace std;
 
 struct ListNode {
@@ -148,7 +149,8 @@ int main()
     //pResultRoot = solution->lowestCommonAncestor(p1, p2, p3);//236.二叉树的最近公共祖先
     //resultVec = solution->topKFrequent(input1, 2);//374.前-k-个高频元素
     //iResult = solution->minEatingSpeed(input1, 2);//875.爱吃香蕉的珂珂
-    iResult = solution->countSubIslands(input4, input5);
+    //iResult = solution->countSubIslands(input4, input5);//1905.统计子岛屿
+    
     cout<<iResult<<endl;
     //cout<<strResult<<endl;
     while (pResult != nullptr)
