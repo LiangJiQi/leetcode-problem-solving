@@ -24,7 +24,9 @@
 //#include "74.搜索二维矩阵.cpp"
 //#include "200.岛屿数量.cpp"
 //#include "236.二叉树的最近公共祖先.cpp"
-#include "347.前-k-个高频元素.cpp"
+//#include "347.前-k-个高频元素.cpp"
+//#include "875.爱吃香蕉的珂珂.cpp"
+#include "1905.统计子岛屿.cpp"
 using namespace std;
 
 struct ListNode {
@@ -59,7 +61,9 @@ int main()
     //int arr1[] = {2,3,2};//213.打家劫舍-ii
     //int arr1[] = {1, 2, 3, 4};//54.螺旋矩阵
     //int arr1[] = {1, 2, 3, 4};//56.合并区间
-    int arr1[] = {1, 1, 1, 2, 2, 3};
+    //int arr1[] = {1, 1, 1, 2, 2, 3};//374.前-k-个高频元素
+    //int arr1[] = {3, 6, 7, 11};//857.爱吃香蕉的珂珂
+    int  arr1[] = {1000000000};
     int arr2[] = {5, 6, 7, 8};
     int arr3[] = {9, 10, 11, 12};
     vector<int>input1(begin(arr1),end(arr1));
@@ -68,9 +72,11 @@ int main()
     //vector<vector<int>> input4 = {{1, 2, 3, 4}, {5, 6, 7, 8}, {9, 10, 11, 12}};//54.螺旋矩阵
     //vector<vector<int>> input4 = {{1, 3}, {2, 6}, {8, 10},{15, 18}};//56.合并区间
     //vector<vector<int>> input4 = {{1, 3}, {3, 18}};//56.合并区间
-    vector<vector<int>> input4 = {{1,3,5,7}, {10,11,16,20}, {23,30,34,60}};//74.搜索二维矩阵
+    //vector<vector<int>> input4 = {{1,3,5,7}, {10,11,16,20}, {23,30,34,60}};//74.搜索二维矩阵
+    vector<vector<int>> input4 = {{1,0,1,0,1}, {1,1,1,1,1}, {0,0,0,0,0}, {1,1,1,1,1},{1,0,1,0,1}};//1905.统计子岛屿
+    vector<vector<int>> input5 = {{0,0,0,0,0}, {1,1,1,1,1}, {0,1,0,1,0}, {0,1,0,1,0},{1,0,0,0,1}};//1905.统计子岛屿
     //vector<vector<int>> input4 = {{1}};//74.搜索二维矩阵
-    vector<vector<char>> input5 = {{'1','1','1'}, {'0','1','0'}, {'1','1','1'}};//200.岛屿数量
+    vector<vector<char>> input6 = {{'1','1','1'}, {'0','1','0'}, {'1','1','1'}};//200.岛屿数量
     ListNode *headA = new ListNode(1);
     ListNode *headB = new ListNode(5);
     ListNode *p = headA;
@@ -140,8 +146,10 @@ int main()
     //bResult = solution->searchMatrix(input4, 13);//74.搜索二维矩阵
     //iResult = solution->numIslands(input5);//200.岛屿数量
     //pResultRoot = solution->lowestCommonAncestor(p1, p2, p3);//236.二叉树的最近公共祖先
-    resultVec = solution->topKFrequent(input1, 2);
-    //cout<<iResult<<endl;
+    //resultVec = solution->topKFrequent(input1, 2);//374.前-k-个高频元素
+    //iResult = solution->minEatingSpeed(input1, 2);//875.爱吃香蕉的珂珂
+    iResult = solution->countSubIslands(input4, input5);
+    cout<<iResult<<endl;
     //cout<<strResult<<endl;
     while (pResult != nullptr)
     {
