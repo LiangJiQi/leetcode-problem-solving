@@ -29,7 +29,8 @@
 //#include "1905.统计子岛屿.cpp"
 //#include "23.合并-k-个升序链表.cpp"
 //#include "25.k-个一组翻转链表.cpp"
-#include "49.字母异位词分组.cpp"
+//#include "49.字母异位词分组.cpp"
+#include "128.最长连续序列.cpp"
 using namespace std;
 
 struct ListNode {
@@ -67,7 +68,8 @@ int main()
     //int arr1[] = {1, 1, 1, 2, 2, 3};//374.前-k-个高频元素
     //int arr1[] = {3, 6, 7, 11};//857.爱吃香蕉的珂珂
     //int arr1[] = {1000000000};//875.爱吃香蕉的珂珂
-    int arr1[] = {1,2,3,4,5};//25.k-个一组翻转链表
+    //int arr1[] = {1,2,3,4,5};//25.k-个一组翻转链表
+    int arr1[] = {-6,8,-5,7,-9,-1,-7,-6,-9,-7,5,7,-1,-8,-8,-2,0};//128.最长连续序列
     int arr2[] = {5, 6, 7, 8};
     int arr3[] = {9, 10, 11, 12};
     vector<int>input1(begin(arr1),end(arr1));
@@ -155,7 +157,8 @@ int main()
     //iResult = solution->minEatingSpeed(input1, 2);//875.爱吃香蕉的珂珂
     //iResult = solution->countSubIslands(input4, input5);//1905.统计子岛屿
     //pResult = solution->reverseKGroup(headA, 2);//k-个一组翻转链表
-    solution->groupAnagrams(input7);
+    //solution->groupAnagrams(input7);//49.字母异位词分组
+    iResult = solution->longestConsecutive(input1);//128.最长连续序列
     cout<<iResult<<endl;
     //cout<<strResult<<endl;
     while (pResult != nullptr)
