@@ -28,23 +28,24 @@
 //#include "875.爱吃香蕉的珂珂.cpp"
 //#include "1905.统计子岛屿.cpp"
 //#include "23.合并-k-个升序链表.cpp"
-#include "25.k-个一组翻转链表.cpp"
+//#include "25.k-个一组翻转链表.cpp"
+#include "49.字母异位词分组.cpp"
 using namespace std;
 
-// struct ListNode {
-//     int val;
-//     ListNode *next;
-//     ListNode() : val(0), next(nullptr) {}
-//     ListNode(int x) : val(x), next(nullptr) {}
-//     ListNode(int x, ListNode *next) : val(x), next(next) {}
-// };
+struct ListNode {
+    int val;
+    ListNode *next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
 
-// struct TreeNode {
-//     int val;
-//     TreeNode *left;
-//     TreeNode *right;
-//     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-// };
+struct TreeNode {
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
 
 int main()
 {
@@ -66,7 +67,7 @@ int main()
     //int arr1[] = {1, 1, 1, 2, 2, 3};//374.前-k-个高频元素
     //int arr1[] = {3, 6, 7, 11};//857.爱吃香蕉的珂珂
     //int arr1[] = {1000000000};//875.爱吃香蕉的珂珂
-    int arr1[] = {1,2};//25.k-个一组翻转链表
+    int arr1[] = {1,2,3,4,5};//25.k-个一组翻转链表
     int arr2[] = {5, 6, 7, 8};
     int arr3[] = {9, 10, 11, 12};
     vector<int>input1(begin(arr1),end(arr1));
@@ -80,6 +81,7 @@ int main()
     vector<vector<int>> input5 = {{0,0,0,0,0}, {1,1,1,1,1}, {0,1,0,1,0}, {0,1,0,1,0},{1,0,0,0,1}};//1905.统计子岛屿
     //vector<vector<int>> input4 = {{1}};//74.搜索二维矩阵
     vector<vector<char>> input6 = {{'1','1','1'}, {'0','1','0'}, {'1','1','1'}};//200.岛屿数量
+    vector<string> input7 = {"eat", "tea", "tan", "ate", "nat", "bat"};
     ListNode *headA = new ListNode(input1[0]);
     ListNode *headB = new ListNode(5);
     ListNode *p = headA;
@@ -152,7 +154,8 @@ int main()
     //resultVec = solution->topKFrequent(input1, 2);//374.前-k-个高频元素
     //iResult = solution->minEatingSpeed(input1, 2);//875.爱吃香蕉的珂珂
     //iResult = solution->countSubIslands(input4, input5);//1905.统计子岛屿
-    pResult = solution->reverseKGroup(headA, 2);
+    //pResult = solution->reverseKGroup(headA, 2);//k-个一组翻转链表
+    solution->groupAnagrams(input7);
     cout<<iResult<<endl;
     //cout<<strResult<<endl;
     while (pResult != nullptr)
