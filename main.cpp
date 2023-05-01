@@ -32,7 +32,10 @@
 //#include "49.字母异位词分组.cpp"
 //#include "128.最长连续序列.cpp"
 //#include "42.接雨水.cpp"
-#include "438.找到字符串中所有字母异位词.cpp"
+//#include "438.找到字符串中所有字母异位词.cpp"
+//#include "239.滑动窗口最大值.cpp"
+//#include "76.最小覆盖子串.cpp"
+#include "189.轮转数组.cpp"
 using namespace std;
 
 struct ListNode {
@@ -72,8 +75,10 @@ int main()
     //int arr1[] = {1000000000};//875.爱吃香蕉的珂珂
     //int arr1[] = {1,2,3,4,5};//25.k-个一组翻转链表
     //int arr1[] = {-6,8,-5,7,-9,-1,-7,-6,-9,-7,5,7,-1,-8,-8,-2,0};//128.最长连续序列
-    int arr1[] = {0,1,0,2,1,0,1,3,2,1,2,1};//42.接雨水
+    //int arr1[] = {0,1,0,2,1,0,1,3,2,1,2,1};//42.接雨水
     //int arr1[] = {1000,999,998,997,996,995,994,993,992,991,990,989,988,987,986,985,984,983,982,981,980,979,978,977,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966};
+    //int arr1[] = {-7,-8,7,5,7,1,6,0};//
+    int arr1[] = {1, 2};//189.轮转数组
     int arr2[] = {5, 6, 7, 8};
     int arr3[] = {9, 10, 11, 12};
     vector<int>input1(begin(arr1),end(arr1));
@@ -122,8 +127,12 @@ int main()
     //     q->next = nullptr;
     // }
     //string strInput1 = "154";//415.字符串相加
-    string strInput1 = "cbaebabacd";//438.找到字符串中所有字母异位词
-    string strInput2 = "abc";//438.找到字符串中所有字母异位词
+    // string strInput1 = "cbaebabacd";//438.找到字符串中所有字母异位词
+    // string strInput2 = "abc";//438.找到字符串中所有字母异位词
+    // string strInput1 = "ADOBECODEBANC";//76.最小覆盖子串
+    // string strInput2 = "ABC";//76.最小覆盖子串
+    string strInput1 = "acbbaca";//76.最小覆盖子串
+    string strInput2 = "aba";//76.最小覆盖子串
 
 
     cout<<"begin test!\n"<<endl;
@@ -164,9 +173,12 @@ int main()
     //solution->groupAnagrams(input7);//49.字母异位词分组
     //iResult = solution->longestConsecutive(input1);//128.最长连续序列
     //iResult = solution->trap(input1);//42.接雨水
-    resultVec = solution->findAnagrams(strInput1, strInput2);
+    //resultVec = solution->findAnagrams(strInput1, strInput2);//438.找到字符串中所有字母异位词
+    //resultVec = solution->maxSlidingWindow(input1, 4);//239.滑动窗口最大值
+    //strResult = solution->minWindow(strInput1, strInput2);//76.最小覆盖子串
+    solution->rotate(input1, 3);
     cout<<iResult<<endl;
-    //cout<<strResult<<endl;
+    cout<<strResult<<endl;
     while (pResult != nullptr)
     {
         cout<<pResult->val<<" ";
