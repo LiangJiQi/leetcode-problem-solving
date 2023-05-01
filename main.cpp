@@ -35,7 +35,8 @@
 //#include "438.找到字符串中所有字母异位词.cpp"
 //#include "239.滑动窗口最大值.cpp"
 //#include "76.最小覆盖子串.cpp"
-#include "189.轮转数组.cpp"
+//#include "189.轮转数组.cpp"
+#include "41.缺失的第一个正数.cpp"
 using namespace std;
 
 struct ListNode {
@@ -78,7 +79,8 @@ int main()
     //int arr1[] = {0,1,0,2,1,0,1,3,2,1,2,1};//42.接雨水
     //int arr1[] = {1000,999,998,997,996,995,994,993,992,991,990,989,988,987,986,985,984,983,982,981,980,979,978,977,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966};
     //int arr1[] = {-7,-8,7,5,7,1,6,0};//
-    int arr1[] = {1, 2};//189.轮转数组
+    //int arr1[] = {1, 2};//189.轮转数组
+    int arr1[] = {1};//41.缺失的第一个正数
     int arr2[] = {5, 6, 7, 8};
     int arr3[] = {9, 10, 11, 12};
     vector<int>input1(begin(arr1),end(arr1));
@@ -176,7 +178,8 @@ int main()
     //resultVec = solution->findAnagrams(strInput1, strInput2);//438.找到字符串中所有字母异位词
     //resultVec = solution->maxSlidingWindow(input1, 4);//239.滑动窗口最大值
     //strResult = solution->minWindow(strInput1, strInput2);//76.最小覆盖子串
-    solution->rotate(input1, 3);
+    //solution->rotate(input1, 3);//189.轮转数组
+    iResult = solution->firstMissingPositive(input1);
     cout<<iResult<<endl;
     cout<<strResult<<endl;
     while (pResult != nullptr)
