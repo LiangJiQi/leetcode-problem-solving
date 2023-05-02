@@ -36,7 +36,8 @@
 //#include "239.滑动窗口最大值.cpp"
 //#include "76.最小覆盖子串.cpp"
 //#include "189.轮转数组.cpp"
-#include "41.缺失的第一个正数.cpp"
+//#include "41.缺失的第一个正数.cpp"
+#include "240.搜索二维矩阵-ii.cpp"
 using namespace std;
 
 struct ListNode {
@@ -90,9 +91,10 @@ int main()
     //vector<vector<int>> input4 = {{1, 3}, {2, 6}, {8, 10},{15, 18}};//56.合并区间
     //vector<vector<int>> input4 = {{1, 3}, {3, 18}};//56.合并区间
     //vector<vector<int>> input4 = {{1,3,5,7}, {10,11,16,20}, {23,30,34,60}};//74.搜索二维矩阵
-    vector<vector<int>> input4 = {{1,0,1,0,1}, {1,1,1,1,1}, {0,0,0,0,0}, {1,1,1,1,1},{1,0,1,0,1}};//1905.统计子岛屿
-    vector<vector<int>> input5 = {{0,0,0,0,0}, {1,1,1,1,1}, {0,1,0,1,0}, {0,1,0,1,0},{1,0,0,0,1}};//1905.统计子岛屿
-    //vector<vector<int>> input4 = {{1}};//74.搜索二维矩阵
+    //vector<vector<int>> input4 = {{1,0,1,0,1}, {1,1,1,1,1}, {0,0,0,0,0}, {1,1,1,1,1},{1,0,1,0,1}};//1905.统计子岛屿
+    //vector<vector<int>> input5 = {{0,0,0,0,0}, {1,1,1,1,1}, {0,1,0,1,0}, {0,1,0,1,0},{1,0,0,0,1}};//1905.统计子岛屿
+    //vector<vector<int>> input4 = {{1,4,7,11,15},{2,5,8,12,19},{3,6,9,16,22},{10,13,14,17,24},{18,21,23,26,30}};//240.搜索二维矩阵-ii
+    vector<vector<int>> input4 = {{-5}};
     vector<vector<char>> input6 = {{'1','1','1'}, {'0','1','0'}, {'1','1','1'}};//200.岛屿数量
     vector<string> input7 = {"eat", "tea", "tan", "ate", "nat", "bat"};
     ListNode *headA = new ListNode(input1[0]);
@@ -179,7 +181,9 @@ int main()
     //resultVec = solution->maxSlidingWindow(input1, 4);//239.滑动窗口最大值
     //strResult = solution->minWindow(strInput1, strInput2);//76.最小覆盖子串
     //solution->rotate(input1, 3);//189.轮转数组
-    iResult = solution->firstMissingPositive(input1);
+    //iResult = solution->firstMissingPositive(input1);//41.缺失的第一个正数
+    //bResult = solution->searchMatrix(input4, -2);//240.搜索二维矩阵-ii
+     
     cout<<iResult<<endl;
     cout<<strResult<<endl;
     while (pResult != nullptr)
