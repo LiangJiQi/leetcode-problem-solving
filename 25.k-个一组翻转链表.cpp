@@ -41,6 +41,41 @@ public:
             head = pNext;//记录未翻转的链表头节点
         }
         return head;
+
+        // ListNode* pHeadPre = new ListNode(0, head);
+        // auto pListPre = pHeadPre;
+        // while(pListPre->next)
+        // {
+        //     int iCount = 0;
+        //     auto pCur = head;
+        //     while(iCount >= k && pCur)
+        //     {
+        //         pCur = pCur->next;
+        //         iCount++;
+        //     }
+        //     if(iCount < k)
+        //     {
+        //         pListPre->next = head;
+        //         break;
+        //     }
+        //     auto pListHead = head;
+        //     auto pListCur = head->next;
+        //     while (pListCur)
+        //     {
+        //         auto pNext = pListCur->next;
+        //         pListCur->next = head;
+        //         head = pListCur;
+        //         iCount--;
+        //         if(iCount <= 0)break;
+        //         pListCur = pNext; 
+        //     }
+        //     pListPre->next = pListCur;
+        //     pListPre = pListHead;
+        //     head = pCur;
+        // }
+
+        // return pHeadPre->next;
+
     }
 };
 // @lc code=end
