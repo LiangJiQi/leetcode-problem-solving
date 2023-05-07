@@ -37,7 +37,10 @@
 //#include "76.最小覆盖子串.cpp"
 //#include "189.轮转数组.cpp"
 //#include "41.缺失的第一个正数.cpp"
-#include "240.搜索二维矩阵-ii.cpp"
+//#include "240.搜索二维矩阵-ii.cpp"
+//#include "94.二叉树的中序遍历.cpp"
+//#include "101.对称二叉树.cpp"
+#include "98.验证二叉搜索树.cpp"
 using namespace std;
 
 struct ListNode {
@@ -48,12 +51,14 @@ struct ListNode {
     ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-struct TreeNode {
-    int val;
-    TreeNode *left;
-    TreeNode *right;
-    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
-};
+// struct TreeNode {
+//     int val;
+//     TreeNode *left;
+//     TreeNode *right;
+//     TreeNode() : val(0), left(nullptr), right(nullptr) {}
+//     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
+//     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
+// };
 
 int main()
 {
@@ -114,6 +119,33 @@ int main()
     // TreeNode *p3 = new TreeNode(1);
     // p1->left = p2;
     // p1->right = p3;
+    //94.二叉树的中序遍历
+    // TreeNode *p1 = new TreeNode(1);
+    // TreeNode *p2 = new TreeNode(2);
+    // TreeNode *p3 = new TreeNode(3);
+    // p1->right = p2;
+    // p2->left = p3;
+    //101.对称二叉树
+    // TreeNode *p1 = new TreeNode(1);
+    // TreeNode *p2 = new TreeNode(2);
+    // TreeNode *p3 = new TreeNode(2);
+    // TreeNode *p4 = new TreeNode(3);
+    // TreeNode *p5 = new TreeNode(3);
+    // p1->right = p2;
+    // p1->left = p3;
+    // p2->right = p4;
+    // p3->left = p5;
+    //98.验证二叉搜索树
+    TreeNode *p1 = new TreeNode(5);
+    TreeNode *p2 = new TreeNode(1);
+    TreeNode *p3 = new TreeNode(4);
+    TreeNode *p4 = new TreeNode(3);
+    TreeNode *p5 = new TreeNode(6);
+    p1->right = p3;
+    p1->left = p2;
+    p3->right = p5;
+    p3->left = p4;
+
     //160.相交链表
     // p->next = new ListNode(input1[1]);
     // p->next->next = nullptr;
@@ -183,9 +215,12 @@ int main()
     //solution->rotate(input1, 3);//189.轮转数组
     //iResult = solution->firstMissingPositive(input1);//41.缺失的第一个正数
     //bResult = solution->searchMatrix(input4, -2);//240.搜索二维矩阵-ii
-     
+    //resultVec = solution->inorderTraversal(p1);//94.二叉树的中序遍历
+    //bResult = solution->isSymmetric(p1);//101.对称二叉树
+    bResult = solution->isValidBST(p1);//98.验证二叉搜索树
     cout<<iResult<<endl;
     cout<<strResult<<endl;
+    cout<<(bResult ? "true" : "false")<<endl;
     while (pResult != nullptr)
     {
         cout<<pResult->val<<" ";
