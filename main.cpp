@@ -40,7 +40,10 @@
 //#include "240.搜索二维矩阵-ii.cpp"
 //#include "94.二叉树的中序遍历.cpp"
 //#include "101.对称二叉树.cpp"
-#include "98.验证二叉搜索树.cpp"
+//#include "98.验证二叉搜索树.cpp"
+//#include "199.二叉树的右视图.cpp"
+//#include "114.二叉树展开为链表.cpp"
+#include "105.从前序与中序遍历序列构造二叉树.cpp"
 using namespace std;
 
 struct ListNode {
@@ -86,8 +89,9 @@ int main()
     //int arr1[] = {1000,999,998,997,996,995,994,993,992,991,990,989,988,987,986,985,984,983,982,981,980,979,978,977,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966,966};
     //int arr1[] = {-7,-8,7,5,7,1,6,0};//
     //int arr1[] = {1, 2};//189.轮转数组
-    int arr1[] = {1};//41.缺失的第一个正数
-    int arr2[] = {5, 6, 7, 8};
+    //int arr1[] = {1};//41.缺失的第一个正数
+    int arr1[] = {3,9,20,15,7};//105.从前序与中序遍历序列构造二叉树
+    int arr2[] = {9,3,15,20,7};//105.从前序与中序遍历序列构造二叉树
     int arr3[] = {9, 10, 11, 12};
     vector<int>input1(begin(arr1),end(arr1));
     vector<int>input2(begin(arr2),end(arr2));
@@ -179,7 +183,7 @@ int main()
     int iResult = 0;
     bool bResult = false;
     ListNode *pResult = nullptr;
-    //TreeNode *pResultRoot = nullptr;
+    TreeNode *pResultRoot = nullptr;
     string strResult = "";
     //result = solution->twoSum(input1, input2[0]);//1.两数之和
     //iResult = solution->removeDuplicates(input1);//26.删除有序数组中的重复项
@@ -217,7 +221,10 @@ int main()
     //bResult = solution->searchMatrix(input4, -2);//240.搜索二维矩阵-ii
     //resultVec = solution->inorderTraversal(p1);//94.二叉树的中序遍历
     //bResult = solution->isSymmetric(p1);//101.对称二叉树
-    bResult = solution->isValidBST(p1);//98.验证二叉搜索树
+    //bResult = solution->isValidBST(p1);//98.验证二叉搜索树
+    //resultVec = solution->rightSideView(p1);//199.二叉树的右视图
+    //solution->flatten(p1);//114.二叉树展开为链表
+    pResultRoot = solution->buildTree(input1, input2);
     cout<<iResult<<endl;
     cout<<strResult<<endl;
     cout<<(bResult ? "true" : "false")<<endl;
