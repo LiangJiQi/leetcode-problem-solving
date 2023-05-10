@@ -2,6 +2,7 @@
 
 #include<iostream>
 #include<vector>
+#include<string.h>
 //#include "1.两数之和.cpp"
 //#include "26.删除有序数组中的重复项.cpp"
 //#include "69.x-的平方根.cpp"
@@ -43,7 +44,8 @@
 //#include "98.验证二叉搜索树.cpp"
 //#include "199.二叉树的右视图.cpp"
 //#include "114.二叉树展开为链表.cpp"
-#include "105.从前序与中序遍历序列构造二叉树.cpp"
+//#include "105.从前序与中序遍历序列构造二叉树.cpp"
+#include "437.路径总和-iii.cpp"
 using namespace std;
 
 struct ListNode {
@@ -62,6 +64,7 @@ struct ListNode {
 //     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 //     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 // };
+
 
 int main()
 {
@@ -140,15 +143,46 @@ int main()
     // p2->right = p4;
     // p3->left = p5;
     //98.验证二叉搜索树
-    TreeNode *p1 = new TreeNode(5);
-    TreeNode *p2 = new TreeNode(1);
-    TreeNode *p3 = new TreeNode(4);
-    TreeNode *p4 = new TreeNode(3);
-    TreeNode *p5 = new TreeNode(6);
+    // TreeNode *p1 = new TreeNode(5);
+    // TreeNode *p2 = new TreeNode(1);
+    // TreeNode *p3 = new TreeNode(4);
+    // TreeNode *p4 = new TreeNode(3);
+    // TreeNode *p5 = new TreeNode(6);
+    // p1->right = p3;
+    // p1->left = p2;
+    // p3->right = p5;
+    // p3->left = p4;
+    //437.路径总和-iii.cpp
+    // TreeNode *p1 = new TreeNode(10);
+    // TreeNode *p2 = new TreeNode(5);
+    // TreeNode *p3 = new TreeNode(-3);
+    // TreeNode *p4 = new TreeNode(3);
+    // TreeNode *p5 = new TreeNode(2);
+    // TreeNode *p6 = new TreeNode(11);
+    // TreeNode *p7 = new TreeNode(3);
+    // TreeNode *p8 = new TreeNode(-2);
+    // TreeNode *p9 = new TreeNode(1);
+    // p1->right = p3;
+    // p1->left = p2;
+    // p2->left = p4;
+    // p2->right = p5;
+    // p4->left = p7;
+    // p4->right = p8;
+    // p5->right = p9;
+    // p3->right = p6;
+    TreeNode *p1 = new TreeNode(1);
+    TreeNode *p2 = new TreeNode(-2);
+    TreeNode *p3 = new TreeNode(-3);
+    TreeNode *p4 = new TreeNode(1);
+    TreeNode *p5 = new TreeNode(3);
+    TreeNode *p6 = new TreeNode(-2);
+    TreeNode *p7 = new TreeNode(-1);
     p1->right = p3;
     p1->left = p2;
-    p3->right = p5;
-    p3->left = p4;
+    // p2->left = p4;
+    // p2->right = p5;
+    // p3->left = p6;
+    // p4->left = p7;
 
     //160.相交链表
     // p->next = new ListNode(input1[1]);
@@ -224,10 +258,11 @@ int main()
     //bResult = solution->isValidBST(p1);//98.验证二叉搜索树
     //resultVec = solution->rightSideView(p1);//199.二叉树的右视图
     //solution->flatten(p1);//114.二叉树展开为链表
-    pResultRoot = solution->buildTree(input1, input2);
+    //pResultRoot = solution->buildTree(input1, input2);//105.从前序与中序遍历序列构造二叉树
+    iResult = solution->pathSum(p1 , -1);
     cout<<iResult<<endl;
-    cout<<strResult<<endl;
-    cout<<(bResult ? "true" : "false")<<endl;
+    //cout<<strResult<<endl;
+    //cout<<(bResult ? "true" : "false")<<endl;
     while (pResult != nullptr)
     {
         cout<<pResult->val<<" ";
