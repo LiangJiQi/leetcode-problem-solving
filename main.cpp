@@ -45,7 +45,10 @@
 //#include "199.二叉树的右视图.cpp"
 //#include "114.二叉树展开为链表.cpp"
 //#include "105.从前序与中序遍历序列构造二叉树.cpp"
-#include "437.路径总和-iii.cpp"
+//#include "437.路径总和-iii.cpp"
+//#include "994.腐烂的橘子.cpp"
+#include "207.课程表.cpp"
+#include "208.实现-trie-前缀树.cpp"
 using namespace std;
 
 struct ListNode {
@@ -106,7 +109,8 @@ int main()
     //vector<vector<int>> input4 = {{1,0,1,0,1}, {1,1,1,1,1}, {0,0,0,0,0}, {1,1,1,1,1},{1,0,1,0,1}};//1905.统计子岛屿
     //vector<vector<int>> input5 = {{0,0,0,0,0}, {1,1,1,1,1}, {0,1,0,1,0}, {0,1,0,1,0},{1,0,0,0,1}};//1905.统计子岛屿
     //vector<vector<int>> input4 = {{1,4,7,11,15},{2,5,8,12,19},{3,6,9,16,22},{10,13,14,17,24},{18,21,23,26,30}};//240.搜索二维矩阵-ii
-    vector<vector<int>> input4 = {{-5}};
+    //vector<vector<int>> input4 = {{2,2},{1,1},{0,0},{2,0}};//994.腐烂的橘子
+    vector<vector<int>> input4 = {{1, 0}, {0, 1}};//207.课程表
     vector<vector<char>> input6 = {{'1','1','1'}, {'0','1','0'}, {'1','1','1'}};//200.岛屿数量
     vector<string> input7 = {"eat", "tea", "tan", "ate", "nat", "bat"};
     ListNode *headA = new ListNode(input1[0]);
@@ -170,19 +174,6 @@ int main()
     // p4->right = p8;
     // p5->right = p9;
     // p3->right = p6;
-    TreeNode *p1 = new TreeNode(1);
-    TreeNode *p2 = new TreeNode(-2);
-    TreeNode *p3 = new TreeNode(-3);
-    TreeNode *p4 = new TreeNode(1);
-    TreeNode *p5 = new TreeNode(3);
-    TreeNode *p6 = new TreeNode(-2);
-    TreeNode *p7 = new TreeNode(-1);
-    p1->right = p3;
-    p1->left = p2;
-    // p2->left = p4;
-    // p2->right = p5;
-    // p3->left = p6;
-    // p4->left = p7;
 
     //160.相交链表
     // p->next = new ListNode(input1[1]);
@@ -217,7 +208,7 @@ int main()
     int iResult = 0;
     bool bResult = false;
     ListNode *pResult = nullptr;
-    TreeNode *pResultRoot = nullptr;
+    //TreeNode *pResultRoot = nullptr;
     string strResult = "";
     //result = solution->twoSum(input1, input2[0]);//1.两数之和
     //iResult = solution->removeDuplicates(input1);//26.删除有序数组中的重复项
@@ -259,10 +250,19 @@ int main()
     //resultVec = solution->rightSideView(p1);//199.二叉树的右视图
     //solution->flatten(p1);//114.二叉树展开为链表
     //pResultRoot = solution->buildTree(input1, input2);//105.从前序与中序遍历序列构造二叉树
-    iResult = solution->pathSum(p1 , -1);
-    cout<<iResult<<endl;
+    //iResult = solution->pathSum(p1 , -1);//437.路径总和-iii
+    //iResult = solution->orangesRotting(input4);//994.腐烂的橘子
+    //bResult = solution->canFinish(2, input4);//207.课程表
+    Trie* trie = new Trie();
+    trie->insert("apple");
+    trie->search("apple");   // 返回 True
+    trie->search("app");     // 返回 False
+    trie->startsWith("app"); // 返回 True
+    trie->insert("app");
+    trie->search("app");     // 返回 True
+    //cout<<iResult<<endl;
     //cout<<strResult<<endl;
-    //cout<<(bResult ? "true" : "false")<<endl;
+    cout<<(bResult ? "true" : "false")<<endl;
     while (pResult != nullptr)
     {
         cout<<pResult->val<<" ";
