@@ -47,8 +47,9 @@
 //#include "105.从前序与中序遍历序列构造二叉树.cpp"
 //#include "437.路径总和-iii.cpp"
 //#include "994.腐烂的橘子.cpp"
-#include "207.课程表.cpp"
-#include "208.实现-trie-前缀树.cpp"
+//#include "207.课程表.cpp"
+//#include "208.实现-trie-前缀树.cpp"
+#include "17.电话号码的字母组合.cpp"
 using namespace std;
 
 struct ListNode {
@@ -205,6 +206,7 @@ int main()
     Solution* solution = nullptr;
     vector<int> resultVec(1);
     vector<vector<int>> resultVec2;
+    vector<string> resultVecStr;
     int iResult = 0;
     bool bResult = false;
     ListNode *pResult = nullptr;
@@ -253,13 +255,14 @@ int main()
     //iResult = solution->pathSum(p1 , -1);//437.路径总和-iii
     //iResult = solution->orangesRotting(input4);//994.腐烂的橘子
     //bResult = solution->canFinish(2, input4);//207.课程表
-    Trie* trie = new Trie();
-    trie->insert("apple");
-    trie->search("apple");   // 返回 True
-    trie->search("app");     // 返回 False
-    trie->startsWith("app"); // 返回 True
-    trie->insert("app");
-    trie->search("app");     // 返回 True
+    resultVecStr = solution->letterCombinations("23");
+    // Trie* trie = new Trie();
+    // trie->insert("apple");
+    // trie->search("apple");   // 返回 True
+    // trie->search("app");     // 返回 False
+    // trie->startsWith("app"); // 返回 True
+    // trie->insert("app");
+    // trie->search("app");     // 返回 True
     //cout<<iResult<<endl;
     //cout<<strResult<<endl;
     cout<<(bResult ? "true" : "false")<<endl;
@@ -281,6 +284,11 @@ int main()
             cout<<i<<" ";
         }
         cout<<endl;
+    }
+    cout<<endl;
+    for(auto s : resultVecStr)
+    {
+        cout<<s<<endl;
     }
     for(auto i : input1)
     {
